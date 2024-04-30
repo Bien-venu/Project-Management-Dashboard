@@ -1,11 +1,10 @@
 import image1 from "../assets/AirBrush_20230329214112.jpg";
 import image2 from "../assets/AirBrush_20230602184435.jpg";
 import image3 from "../assets/Bienvenu.jpg";
+
 const Team = () => {
   return (
-    <ul
-      className="flex flex-col items-center justify-center gap-4 border-b py-8"
-    >
+    <ul className="flex flex-col items-center justify-center gap-4 border-b py-8">
       <li className="relative h-6 w-6 overflow-hidden">
         <img
           src={image1}

@@ -1,10 +1,12 @@
-import NavBar from "./components/NavBar";
+import Title from "./components/Title";
+import Top from "./components/Top";
 
 const App = () => {
   return (
-    <>
-      <NavBar />
-    </>
+    <div className=" flex flex-col w-full ">
+      <Top />
+      <Title />
+    </div>
   );
 };
 
