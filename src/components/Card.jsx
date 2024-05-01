@@ -9,7 +9,7 @@ const Card = ({ data }) => {
     <div className=" flex flex-col gap-4 rounded-2xl bg-white p-5 shadow-sm">
       <div className="flex items-center justify-between">
         {data.completed ? (
-          <div className="bg-completeBg flex h-8 items-center justify-center rounded-lg px-3 text-xs font-semibold text-active">
+          <div className="bg-completeBg flex h-8 items-center justify-center rounded-lg px-3 text-xs font-semibold text-complete">
             Completed
           </div>
         ) : (
@@ -19,23 +19,23 @@ const Card = ({ data }) => {
         )}
         <CiMenuKebab />
       </div>
-      <main className=" flex flex-1 flex-col gap-1 max-h-12 min-h-12">
+      <main className=" flex max-h-12 min-h-12 flex-1 flex-col gap-1">
         <h1 className=" text-xs font-semibold">{data.todo}</h1>
       </main>
       <footer className="flex flex-wrap justify-between gap-2 border-t pt-3 text-center">
         <div className="flex -space-x-2 rtl:space-x-reverse">
           <img
-            className="2xl:h-7 2xl:w-7 h-6 w-6 rounded-full border border-white object-cover"
+            className="h-6 w-6 rounded-full border border-white object-cover 2xl:h-7 2xl:w-7"
             src={image1}
             alt=""
           />
           <img
-            className="2xl:h-7 2xl:w-7 h-6 w-6 rounded-full border border-white object-cover"
+            className="h-6 w-6 rounded-full border border-white object-cover 2xl:h-7 2xl:w-7"
             src={image2}
             alt=""
           />
           <img
-            className="2xl:h-7 2xl:w-7 h-6 w-6 rounded-full border border-white object-cover"
+            className="h-6 w-6 rounded-full border border-white object-cover 2xl:h-7 2xl:w-7"
             src={image3}
             alt=""
           />
