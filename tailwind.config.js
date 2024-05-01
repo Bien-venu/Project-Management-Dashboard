@@ -1,6 +1,9 @@
+/* eslint-disable no-undef */
+const flowbite = require("flowbite-react/tailwind");
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   theme: {
     extend: {
       colors: {
@@ -8,16 +11,19 @@ export default {
         background: "#f6f8fa",
         white: "#ffffff",
         todo: "#d99f61",
-        complete: "#58b092",
-        onprogress: "#a8d1ef",
+        complete: "#52a187",
+        onprogress: "#6cc2ff",
         navbar: "#f9f9f9",
         more: "#a2b0cb",
         active: "#5dd827",
-        grey: "#646f80",
+        grey: "#a2a0a7",
         noti: "#e43739",
-        shadow: "#f3f2fb",
+        shadow: "#efeef9",
+        completeBg: "#edf9f5",
+        onprogressBg: "#ecf4f9",
       },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line no-undef
+  plugins: [flowbite.content()],
 };

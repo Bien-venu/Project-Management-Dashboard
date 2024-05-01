@@ -4,7 +4,7 @@ import image3 from "../assets/Bienvenu.jpg";
 
 const Access = () => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 text-xs">
       <div className="flex items-center gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const Access = () => {
             strokeLinejoin="round"
           />
         </svg>
-        <span className=" text-xs font-bold">Limited access</span>
+        <span className=" text-xs font-semibold">Limited access</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -53,33 +53,33 @@ const Access = () => {
       </div>
       <div className="flex -space-x-2 border-l pl-3 rtl:space-x-reverse">
         <img
-          className="h-6 w-6 rounded-full border border-white "
+          className="h-6 w-6 rounded-full border border-white object-cover 2xl:h-7 2xl:w-7"
           src={image1}
           alt=""
         />
         <img
-          className="h-6 w-6 rounded-full border border-white "
+          className="h-6 w-6 rounded-full border border-white object-cover 2xl:h-7 2xl:w-7"
           src={image2}
           alt=""
         />
         <img
-          className="h-6 w-6 rounded-full border border-white "
+          className="h-6 w-6 rounded-full border border-white object-cover 2xl:h-7 2xl:w-7"
           src={image3}
           alt=""
         />
         <img
-          className="h-6 w-6 rounded-full border border-white "
+          className="h-6 w-6 rounded-full border border-white object-cover 2xl:h-7 2xl:w-7"
           src={image1}
           alt=""
         />
         <a
-          className="flex h-6 w-6 items-center justify-center rounded-full border border-white bg-more text-xs font-medium text-white hover:bg-gray-600 "
+          className="flex h-6 w-6 items-center justify-center rounded-full border border-white bg-more text-xs font-medium text-white hover:bg-gray-700 2xl:h-7 2xl:w-7 "
           href="#"
         >
           +2
         </a>
       </div>
-      <span className=" bg-blue text-white p-1 rounded-full">
+      <span className=" rounded-full bg-blue p-1 text-white">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

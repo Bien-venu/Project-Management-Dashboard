@@ -1,6 +1,6 @@
 const Search = () => {
   return (
-    <div className="flex text-grey justify-between items-center rounded-lg font-medium w-80 bg-navbar p-2 px-4 text-xs">
+    <div className="flex w-80 items-center justify-between rounded-lg bg-navbar p-2 px-4 text-xs font-medium text-grey">
       <input
         type="text"
         placeholder="Search"
@@ -9,8 +9,8 @@ const Search = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        width={16}
-        height={16}
+        width={17}
+        height={17}
         fill={"none"}
       >
         <path
