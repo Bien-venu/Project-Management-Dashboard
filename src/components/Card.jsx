@@ -3,21 +3,49 @@ import { CiMenuKebab } from "react-icons/ci";
 import image1 from "../assets/AirBrush_20230329214112.jpg";
 import image2 from "../assets/AirBrush_20230602184435.jpg";
 import image3 from "../assets/Bienvenu.jpg";
+import toast from "react-hot-toast";
+import Dropdown from "./Dropdown";
 
 const Card = ({ data }) => {
+  const dropdownStyle = {
+    width: "12px",
+    backgroundColor: "#ffff",
+    outline: "none",
+    // border: "1px solid red",
+  };
+
+  const handleDelete = (id) => {
+    fetch(`https://dummyjson.com/todos/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => {
+        if (res.ok) {
+          toast.success(`Todo item with ID ${id} deleted successfully.`);
+        } else {
+          toast.error("Failed to delete todo item.");
+        }
+      })
+      .catch((error) => {
+        toast.error("Error deleting todo item:", error);
+      });
+  };
+  const hasAttribute = Object.prototype.hasOwnProperty.call(data, "isDeleted");
+  console.log(data);
+
   return (
     <div className=" flex flex-col gap-4 rounded-2xl bg-white p-5 shadow-sm">
       <div className="flex items-center justify-between">
         {data.completed ? (
-          <div className="bg-completeBg flex h-8 items-center justify-center rounded-lg px-3 text-xs font-semibold text-complete">
+          <div className="flex h-8 items-center justify-center rounded-lg bg-completeBg px-3 text-xs font-semibold text-complete">
             Completed
           </div>
         ) : (
-          <div className="bg-onprogressBg flex h-8 items-center justify-center rounded-lg px-3 text-xs font-semibold text-onprogress">
+          <div className="flex h-8 items-center justify-center rounded-lg bg-onprogressBg px-3 text-xs font-semibold text-onprogress">
             In Progress
           </div>
         )}
-        <CiMenuKebab />
+        <Dropdown />
+        
       </div>
       <main className=" flex max-h-12 min-h-12 flex-1 flex-col gap-1">
         <h1 className=" text-xs font-semibold">{data.todo}</h1>

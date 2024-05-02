@@ -9,7 +9,7 @@ const ProjectList = () => {
       {isLoading ? (
         <></>
       ) : (
-        <div className=" flex-1 overflow-auto p-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+        <div className=" flex-1 overflow-auto p-5 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {data.todos.map((data, index) => (
             <Card key={index} data={data} />
           ))}

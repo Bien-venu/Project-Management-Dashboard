@@ -5,7 +5,7 @@ const Tasks = () => {
     useDataContext();
 
   return (
-    <div className=" mx-5 flex h-14 items-center justify-between rounded-2xl bg-white px-5 text-xs font-semibold shadow-sm">
+    <div className=" mx-5 flex h-12 items-center justify-between rounded-xl bg-white px-5 text-xs font-semibold shadow-sm">
       <div className="flex h-full items-center gap-6">
         <div className="relative flex h-full items-center gap-2 text-blue">
           <h1>All Tasks</h1>
@@ -33,8 +33,8 @@ const Tasks = () => {
           </span>
         </div>
       </div>
-      <div className="flex items-center gap-2 font-semibold">
-        <div className="flex items-center gap-2 rounded-lg border p-2">
+      <div className="text-filter flex items-center gap-2 font-semibold">
+        <div className="flex items-center gap-2 rounded-lg border p-1.5 px-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -82,8 +82,8 @@ const Tasks = () => {
             />
           </svg>
           <span>Filter & Sort</span>
-        </div>{" "}
-        <div className="flex items-center gap-2 rounded-lg border p-2">
+        </div>
+        <div className="flex items-center gap-2 rounded-lg border  p-1.5 px-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

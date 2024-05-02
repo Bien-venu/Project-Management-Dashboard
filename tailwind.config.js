@@ -21,6 +21,7 @@ export default {
         shadow: "#efeef9",
         completeBg: "#edf9f5",
         onprogressBg: "#ecf4f9",
+        filter: "#575757",
       },
     },
   },
