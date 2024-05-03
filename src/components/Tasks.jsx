@@ -1,39 +1,33 @@
 import { useDataContext } from "../context/AppContext";
+import AddTask from "./AddTask";
 
 const Tasks = () => {
-  const { dataLength, completedTrueCount, completedFalseCount } =
-    useDataContext();
+  const { tasks, selectedTasks, setSelectedTasks } = useDataContext();
+
+  const handleTasks = (task) => {
+    setSelectedTasks(task);
+  };
 
   return (
     <div className=" mx-5 flex h-12 items-center justify-between rounded-xl bg-white px-5 text-xs font-semibold shadow-sm">
       <div className="flex h-full items-center gap-6">
-        <div className="relative flex h-full items-center gap-2 text-blue">
-          <h1>All Tasks</h1>
-          <span className=" flex h-4 w-5 items-center justify-center rounded bg-shadow text-blue">
-            {dataLength}
-          </span>
-          <span className="absolute bottom-0 h-1.5 w-full rounded-t-full bg-blue"></span>
-        </div>
-        <div className="flex items-center gap-2 text-grey">
-          <h1>To do</h1>
-          <span className=" flex h-4 w-5 items-center justify-center rounded bg-shadow text-grey">
-            3
-          </span>
-        </div>
-        <div className="flex items-center gap-2 text-grey">
-          <h1>In Progress</h1>
-          <span className=" flex h-4 w-5 items-center justify-center rounded bg-shadow text-grey">
-            {completedFalseCount}
-          </span>
-        </div>
-        <div className="flex items-center gap-2 text-grey">
-          <h1>Completed</h1>
-          <span className=" flex h-4 w-5 items-center justify-center rounded bg-shadow text-grey">
-            {completedTrueCount}
-          </span>
-        </div>
+        {tasks.map((task, index) => (
+          <div
+            key={index}
+            onClick={() => handleTasks(task.name)}
+            className="relative flex h-full cursor-pointer items-center gap-2 text-blue"
+          >
+            <h1 className=" cursor-pointer">{task.name}</h1>
+            <span className=" flex h-5 w-5 items-center justify-center rounded bg-shadow text-blue">
+              {task.number}
+            </span>
+            {selectedTasks === task.name && (
+              <span className="absolute bottom-0 h-1.5 w-full rounded-t-full bg-blue"></span>
+            )}
+          </div>
+        ))}
       </div>
-      <div className="text-filter flex items-center gap-2 font-semibold">
+      <div className="flex items-center gap-2 font-semibold text-filter">
         <div className="flex items-center gap-2 rounded-lg border p-1.5 px-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,6 +101,7 @@ const Tasks = () => {
             />
           </svg>
           <span>New Task</span>
+          <AddTask />
         </div>
       </div>
     </div>

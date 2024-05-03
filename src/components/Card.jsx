@@ -1,20 +1,15 @@
 /* eslint-disable react/prop-types */
-import { CiMenuKebab } from "react-icons/ci";
+import toast from "react-hot-toast";
 import image1 from "../assets/AirBrush_20230329214112.jpg";
 import image2 from "../assets/AirBrush_20230602184435.jpg";
 import image3 from "../assets/Bienvenu.jpg";
-import toast from "react-hot-toast";
 import Dropdown from "./Dropdown";
 
 const Card = ({ data }) => {
-  const dropdownStyle = {
-    width: "12px",
-    backgroundColor: "#ffff",
-    outline: "none",
-    // border: "1px solid red",
-  };
-
+  
   const handleDelete = (id) => {
+    console.log(id, data);
+
     fetch(`https://dummyjson.com/todos/${id}`, {
       method: "DELETE",
     })
@@ -29,8 +24,7 @@ const Card = ({ data }) => {
         toast.error("Error deleting todo item:", error);
       });
   };
-  const hasAttribute = Object.prototype.hasOwnProperty.call(data, "isDeleted");
-  console.log(data);
+  // const hasAttribute = Object.prototype.hasOwnProperty.call(data, "isDeleted");
 
   return (
     <div className=" flex flex-col gap-4 rounded-2xl bg-white p-5 shadow-sm">
@@ -44,8 +38,7 @@ const Card = ({ data }) => {
             In Progress
           </div>
         )}
-        <Dropdown />
-        
+        <Dropdown handleDelete={handleDelete} id={data.id} />
       </div>
       <main className=" flex max-h-12 min-h-12 flex-1 flex-col gap-1">
         <h1 className=" text-xs font-semibold">{data.todo}</h1>

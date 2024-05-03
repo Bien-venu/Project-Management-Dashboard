@@ -6,7 +6,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Dropdown() {
+// eslint-disable-next-line react/prop-types
+export default function Dropdown({ handleDelete, id }) {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -47,6 +48,7 @@ export default function Dropdown() {
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                     "block px-4 py-2 text-sm",
                   )}
+                  onClick={() => handleDelete(id)}
                 >
                   Delete
                 </a>

@@ -5,7 +5,7 @@ import Team from "./Team";
 
 const NavBar = () => {
   return (
-    <div className="py-4 shadow-sm relative flex h-screen w-20 flex-col bg-white">
+    <div className="py-4 shadow-sm relative flex h-screen min-w-14 flex-col bg-white">
       <Logo />
       <Bars />
       <Team />

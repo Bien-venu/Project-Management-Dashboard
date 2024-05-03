@@ -11,6 +11,12 @@ export const DataProvider = ({ children }) => {
   const [dataLength, setDataLength] = useState(0);
   const [completedTrueCount, setCompletedTrueCount] = useState(0);
   const [completedFalseCount, setCompletedFalseCount] = useState(0);
+  const tasks = [
+    { name: "All Tasks", number: dataLength, completed: true },
+    { name: "In Progress", number: completedFalseCount, completed: false },
+    { name: "Completed", number: completedTrueCount, completed: true },
+  ];
+  const [selectedTasks, setSelectedTasks] = useState("All Tasks");
 
   useEffect(() => {
     fetchData()
@@ -50,6 +56,9 @@ export const DataProvider = ({ children }) => {
         dataLength,
         completedTrueCount,
         completedFalseCount,
+        tasks,
+        selectedTasks,
+        setSelectedTasks,
       }}
     >
       {children}

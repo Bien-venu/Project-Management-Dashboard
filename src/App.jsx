@@ -5,7 +5,7 @@ import Top from "./components/Top";
 
 const App = () => {
   return (
-    <div className=" flex w-full h-screen flex-col tracking-tight">
+    <div className=" flex h-screen w-full flex-1 flex-col tracking-tight">
       <Top />
       <Title />
       <Tasks />
