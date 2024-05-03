@@ -1,7 +1,7 @@
 const Bars = () => {
   return (
     <ul className=" flex flex-col gap-1 border-b py-4 text-grey">
-      <li className="relative flex 2xl:h-11 h-8 items-center justify-center ">
+      <li className="relative flex h-9 items-center justify-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -23,7 +23,7 @@ const Bars = () => {
           />
         </svg>
       </li>
-      <li className="relative flex 2xl:h-11 h-8 items-center justify-center ">
+      <li className="relative flex h-9 items-center justify-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ const Bars = () => {
         </svg>
         <span className="absolute right-4 2xl:right-5 top-2 2xl:top-3.5 h-2 w-2 rounded-full border border-white bg-noti"></span>
       </li>
-      <li className="relative flex 2xl:h-11 h-8 items-center justify-center ">
+      <li className="relative flex h-9 items-center justify-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -83,7 +83,7 @@ const Bars = () => {
           />
         </svg>
       </li>
-      <li className="relative flex 2xl:h-11 h-8 items-center justify-center bg-shadow text-blue ">
+      <li className="relative flex h-9 items-center justify-center bg-shadow text-blue ">
         <span className="absolute left-0 h-full w-1 rounded-r bg-blue"></span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const Bars = () => {
           />
         </svg>
       </li>
-      <li className="relative flex 2xl:h-11 h-8 items-center justify-center ">
+      <li className="relative flex h-9 items-center justify-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

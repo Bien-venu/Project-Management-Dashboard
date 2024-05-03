@@ -77,32 +77,8 @@ const Tasks = () => {
           </svg>
           <span>Filter & Sort</span>
         </div>
-        <div className="flex items-center gap-2 rounded-lg border  p-1.5 px-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width={16}
-            height={16}
-            fill={"none"}
-          >
-            <path
-              d="M12 4V20"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M4 12H20"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <span>New Task</span>
-          <AddTask />
-        </div>
+
+        <AddTask />
       </div>
     </div>
   );
